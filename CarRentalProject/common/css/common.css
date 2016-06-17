@@ -1,0 +1,75 @@
+@import url(../../../common/css/reset.css);
+@import url(../../../common/css/fonts.css);
+@import url(../../../common/css/common.css);
+.common__button {
+  width: 90px;
+  height: 40px;
+  float: right;
+  cursor: pointer;
+  margin-top: 25px;
+  background: #8d8d82;
+  background: -webkit-linear-gradient(top, #929287 0%, #848478 100%);
+  background: -moz-linear-gradient(top, #929287 0%, #848478 100%);
+  text-transform: uppercase;
+  font: 14px 'HelveticaNeue-Bold';
+  line-height: 40px;
+  color: #ffffff;
+  text-shadow: 0.5px 0.3px 2px #000000;
+  text-align: center;
+  outline: none;
+}
+button, button:hover {
+  outline: none;
+}
+.common__smallText {
+  width: 100%;
+  margin-left: 20px;
+  font: 12px 'HelveticaNeue-Medium';
+  color: #696969;
+  text-shadow: 0.1px 0.1px 0.01px #cccccc;
+}
+.common__bigText {
+  width: 100%;
+  margin-left: 20px;
+  font: 26px 'HelveticaNeue-Bold';
+}
+.common__header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 0.5px 0.3px 2px #000000;
+}
+.common__closeButton{
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  background-color: #808080;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10%;
+}
+.common__closeButtonIn{
+  font: bold 25px Verdana ;
+  position: absolute;
+  bottom: -3px;
+  left: 1px;
+}
+.common__capitel {
+  font-variant: small-caps;
+}
+.boldFont {
+  font-family: 'HelveticaNeue-Bold', sans-serif;
+}
+.mediumFont {
+  font-family: 'HelveticaNeue-Medium', sans-serif;
+}
+.button{
+  outline: none;
+  border: 0px;
+}

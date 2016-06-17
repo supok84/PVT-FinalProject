@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="Car Rental">
+		<meta charset="utf-8">
+		<link href="common/css/index_style.min.css" type="text/css" rel="stylesheet">
+		<title>Car Rental</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!--<link href="blocks/style.min.css" type="text/css" rel="stylesheet">-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<div class="page__wrapper">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<!--------------------------------------------LINE CHART----------------------------------------------------------->
+					<div class="col-md-4">
+							<div class="lineChart">
+								<div class="lineChart__top">
+									<div class="lineChart__top_header boldFont"> Overseas Visitiors </div>
+									<canvas id="lineChart__canvas"></canvas>
+									<div id="lineChart__icon"></div>
+								</div>
+
+								<div class="lineChart__bottom">
+									<button type="button" class="common__button" id="lineChart__button">
+										<span class="common__buttonText boldFont">more</span>
+									</button>
+									<div class="common__smallText">Total Visitors</div>
+									<div class="common__bigText" id="lineChart_totalVisitors"> <span></span> </div>
+
+								</div>
+								<div id="lineChart__totalVisitorsTable">
+									<table>
+										<tr>
+											<th>Year</th>
+											<th>Total Visitors</th>
+										</tr>
+
+										<tr>
+											<td>2016</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2015</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2014</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2013</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2012</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2011</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2010</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2009</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2008</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2007</td>
+											<td class="table_data"></td>
+										</tr>
+
+										<tr>
+											<td>2006</td>
+											<td class="table_data"></td>
+										</tr>
+									</table>
+									<div class="common__closeButton" id="lineChart__table_button"> <div class="common__closeButtonIn">x</div>  </div>
+								</div>
+
+								<div id="lineChart__overseasVisitorsTable">
+									<table>
+										<tr>
+											<th>Year</th>
+											<th>Overseas Visitors</th>
+										</tr>
+
+										<tr>
+											<td>2016</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2015</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2014</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2013</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2012</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2011</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2010</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2009</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2008</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2007</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+
+										<tr>
+											<td>2006</td>
+											<td class="overseasTable_data"></td>
+										</tr>
+									</table>
+									<div class="common__closeButton" id="lineChart__overseasTable_button"> <div class="common__closeButtonIn">x</div> </div>
+								</div>
+							</div>
+
+
+	<!-------------------------------------------SUBSCRIBE-------------------------------------------------------------><div class="subscribe">
+							<form name="subscribe__form" method="post" action="#">
+								<input type="text" value="Email adress..."  class="subscribe__form_text">
+								<button type="submit" class="subscribe__form_submit">submit</button>
+							</form>
+						</div>
+					</div>
+
+	<!-------------------------------------------CAR RENTAL------------------------------------------------------------>
+					<div class="col-md-4">
+						<div class="carRental">
+							<div class="carRental__header common__header boldFont">
+								Car Rental
+							</div>
+
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-example-generic" data-slide-to="0" data-price="125" class="carousel-indicators-item active"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="1" data-price="75" class="carousel-indicators-item"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="2" data-price=" 2" class="carousel-indicators-item"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active" data-price="125">
+										<img src="common/css/img/ford.png" alt="Ford Mustang">
+										<div class="carousel-caption boldFont">
+											<p>2013 Ford Mustang </p>
+											<p> Convertible </p>
+										</div>
+									</div>
+									<div class="item" data-price="75">
+										<img src="common/css/img/forester.png" alt="Subaru Forester">
+										<div class="carousel-caption boldFont">
+											<p>2016 Subaru Forester</p>
+											<p> Universal </p>
+										</div>
+									</div>
+									<div class="item" data-price="2">
+										<img src="common/css/img/zaz.png" alt="ZAZ">
+										<div class="carousel-caption boldFont">
+											<p>1964 ZAZ</p>
+											<p> Sedan </p>
+										</div>
+									</div>
+									<p></p>
+									<p></p>
+								</div>
+
+								<!-- Controls -->
+								<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" id="leftControl">
+									<span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" id="rightControl">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+
+							<div class="carRental__bottom">
+								<form name="carRental__book" method="post" action="#">
+									<button class="common__button" type="submit">
+										<span class="common__buttonText">book</span>
+									</button>
+								</form>
+								<div class="common__smallText">Best Price</div>
+								<div class="common__bigText">
+									$<span id="carRental__bottom_price">125</span>  / <span class="common__capitel">day</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+	<!-----------------------------------------LOCATION---------------------------------------------------------------->
+					<div class="col-md-4">
+						<div class="location">
+							<div class="location__top">
+								<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+								<div style='overflow:hidden;height:290px;width:330px;'><div id='gmap_canvas' style='height:290px;width:330px;'></div><div><small>
+									<a href="http://embedgooglemaps.com">									embedgooglemaps.com							</a></small></div>
+									<div><small><a href="http://buyproxies.io/">buy proxy</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+								<script type='text/javascript'>
+									function init_map(){var myOptions = {zoom: 12,center:new google.maps.LatLng(37.73749576344509,-122.476165471875),mapTypeId: google.maps.MapTypeId.ROADMAP};
+										map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+										marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.73749576344509,-122.479165471875)});
+										google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+								</script>
+							</div>
+
+							<div class="location__bottom">
+								<div id="location__bottom_icon"></div>
+								<div class="boldFont">Sigmund Stern Grove</div>
+								<div class="common__smallText">San Francisco, CA 94132</div>
+								<div class="common__smallText">United States</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	<!-------------------------------------------CART SUMMARY---------------------------------------------------------->
+				<div class="row-fluid">
+					<div class="col-md-4">
+						<div class="cartSummary">
+							<div class="cartSummary__header common__header boldFont">
+								Cart Summary
+							</div>
+
+							<div class="cartSummary__content">
+								<div class="cartSummary__content_item" id="cartSummary__flightData">
+									<div class="cartSummary__content_itemPriest" id="cartSummary__flightData_delete"></div>
+									<div class="cartSummary__content_itemFlightImage"></div>
+									<div class="cartSummary__content_itemData">
+										<p class="common__smallText">Flight</p>
+										<p class="cartSummary__content_text">LHR - SFO</p>
+									</div>
+									<div class="cartSummary__content_itemPrice">
+										<span class="cartSummary__content_bigText">$</span>
+										<span class="cartSummary__content_text" id="cartSummary__flightPrice"></span>
+									</div>
+								</div>
+
+								<div class="cartSummary__line" id="cartSummary__firstLine"></div>
+								<div class="cartSummary__line" id="cartSummary__secondLine"></div>
+
+								<div class="cartSummary__button common__button" id="cartSummary__addFlightButton">
+									Add Flight
+								</div>
+
+								<div class="cartSummary__content_item" id="cartSummary__hotelData">
+									<div class="cartSummary__content_itemPriest" id="cartSummary__hotelData_delete"></div>
+									<div class="cartSummary__content_itemHotelImage"></div>
+									<div class="cartSummary__content_itemData">
+										<p class="common__smallText">Hotel</p>
+										<p class="cartSummary__content_text">14 Nights</p>
+									</div>
+									<div class="cartSummary__content_itemPrice">
+										<span class="cartSummary__content_bigText">$</span>
+										<span class="cartSummary__content_text" id="cartSummary__hotelPrice"></span>
+									</div>
+								</div>
+
+								<div class="cartSummary__button common__button" id="cartSummary__addHotelButton">
+									Add Hotel
+								</div>
+
+								<div class="cartSummary__content_total">
+									<div class="cartSummary__content_totalHalf cartSummary__content_bigText">total</div>
+									<div class="cartSummary__content_totalHalf cartSummary__content_bigText">
+										$
+										<span id="cartSummary_totalPrice"></span>
+									</div>
+								</div>
+							</div>
+							<form name="cartSummary__checkout" method="post" action="#">
+								<button type="submit" class="cartSummary__bottom boldFont">
+									checkout
+								</button>
+							</form>
+						</div>
+					</div>
+<!--------------------------------------------PRODUCT------------------------------------------------------------------>
+					<div class="col-md-8">
+						<div class="product">
+							<div class="product__image">
+								<div class="product__image_icon" id="product__image_icon"></div>
+								<div id="product__image_zoomed">
+									<div class="common__closeButton" id="product__zoomCloseButton">
+										<div class="common__closeButtonIn" id="k">x</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="product__description">
+								<h2 class="product__decsription_header boldFont">Santa Cruz</h2>
+								<div class="product__description_content common__smallText">
+									<p>Santa Cruz County was one of the original counties </p>
+									<p>of California, created in 1850 at the time of </p>
+									<p>statehood. In the original act, the county was given </p>
+									<p>the name of "Branciforte" after the Spanish pueblo </p>
+									<p>founded there in 1797; a major watercourse in the </p>
+									<p>county, Branciforte Creek, bears this name. Less </p>
+									<p>than two months later on April 5, 1850, the name </p>
+									<p>was changed to "Santa Cruz" ("Holy Cross").</p>
+								</div>
+								<div class="product__description_icon" id="product__description_icon">
+									<div id="product__description_likeInfo"> <span id="product__likesNumber">3698</span> people like it</div>
+								</div>
+								<button class="product__description_button common__button" >
+									<a href="https://en.wikipedia.org/wiki/Santa_Cruz,_California" target="_blank"><div class="common__buttonText">more</div></a>
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	<script async src="common/scripts/index_script.min.js"></script>
+	</body>
+
+</html>
+
+

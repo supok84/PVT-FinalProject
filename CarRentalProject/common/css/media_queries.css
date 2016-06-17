@@ -1,0 +1,102 @@
+@media screen and (max-width: 992px) {
+    .page__wrapper{
+        width: 950px;
+        height: 1500px;
+        position: relative;
+    }
+    .lineChart, .subscribe, .carRental, .location, .cartSummary {
+        width: 330px;
+        margin: 20px auto;
+        position: absolute;
+    }
+    .lineChart {
+        top: 0;
+        left: 80px;
+    }
+    .subscribe{
+        top: 335px;
+        left: 80px;
+    }
+    .carRental{
+        top: -1px;
+        left: 455px;
+    }
+    .location{
+        top: 410px;
+        left: 80px;
+    }
+    .cartSummary{
+        top: 410px;
+        left: 455px;
+        height: 385px;
+    }
+    .cartSummary__content_item{
+        height: 110px;
+    }
+    #cartSummary__firstLine {
+        top: 160px;
+    }
+    #cartSummary__secondLine {
+        top: 265px;
+    }
+    #cartSummary__addFlightButton {
+        top: 60px;
+    }
+    #cartSummary__addHotelButton {
+        top: 170px;
+    }
+    .cartSummary__bottom{
+        position: absolute;
+        bottom: 0;
+    }
+    .product{
+        width: 705px;
+        position: absolute;
+        top: 830px;
+        left: 80px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .page__wrapper {
+        width: 700px;
+        height: 2200px;
+    }
+
+    .lineChart, .subscribe, .carRental, .location, .cartSummary {
+        width: 330px;
+        margin: 20px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .product {
+        width: 330px;
+        height: 580px;
+        margin: 20px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .product__image {
+        width: 330px;
+
+    }
+
+    .product__description {
+        width: 330px;
+    }
+
+    .product__image_icon {
+        visibility: hidden;
+    }
+
+    .product__description_icon {
+        top: -40px;
+        left: 285px;
+
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Product">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/product.css" type="text/css" rel="stylesheet">
+        <title>Product</title>
+    </head>
+
+    <body>
+        <div class="product__wrapper">
+            <div class="product__image">
+                <div class="product__image_icon" id="product__image_icon"></div>
+                <div id="product__image_zoomed">
+                    <div class="common__closeButton" id="product__zoomCloseButton">
+                        <div class="common__closeButtonIn">x</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__description">
+                <h2 class="product__decsription_header boldFont">Santa Cruz</h2>
+                <div class="product__description_content common__smallText">
+                    <p>Santa Cruz County was one of the original counties </p>
+                    <p>of California, created in 1850 at the time of </p>
+                    <p>statehood. In the original act, the county was given </p>
+                    <p>the name of "Branciforte" after the Spanish pueblo </p>
+                    <p>founded there in 1797; a major watercourse in the </p>
+                    <p>county, Branciforte Creek, bears this name. Less </p>
+                    <p>than two months later on April 5, 1850, the name </p>
+                    <p>was changed to "Santa Cruz" ("Holy Cross").</p>
+                </div>
+                <div class="product__description_icon" id="product__description_icon">
+                    <div id="product__description_likeInfo"> <span id="product__likesNumber">3698</span> people like it</div>
+                </div>
+                <div class="product__description_button common__button" >
+                    <a href="https://en.wikipedia.org/wiki/Santa_Cruz,_California" target="_blank"><div class="common__buttonText">more</div></a>
+                </div>
+            </div>
+
+
+        </div>
+        <script>
+            var likesFlag = 0;
+            function imageZoom(){
+                var product__image_zoomed = document.getElementById("product__image_zoomed");
+                product__image_zoomed.style.visibility = "visible";
+                product__image_zoomed.style.width = "705px";
+                product__image_zoomed.style.height = "545px";
+            }
+            function closeZoom(){
+                var product__image_zoomed = document.getElementById("product__image_zoomed");
+                product__image_zoomed.style.visibility = "hidden";
+                product__image_zoomed.style.width = "330px";
+                product__image_zoomed.style.height = "290px";
+            }
+            function showLikeWindow(){
+                var product__description_likeInfo = document.getElementById("product__description_likeInfo");
+                product__description_likeInfo.style.visibility = "visible";
+            }
+            function removeLikeWindow(){
+                var product__description_likeInfoHidden = document.getElementById("product__description_likeInfo");
+                product__description_likeInfoHidden.style.visibility = "hidden";
+            }
+            function addLike(){
+                var product__likesNumber = Number(document.getElementById("product__likesNumber").innerHTML);
+                document.getElementById("product__likesNumber").innerHTML = String(product__likesNumber + 1);
+                likesFlag = likesFlag + 1;
+            }
+            function removeLike(){
+                var product__likesNumber = Number(document.getElementById("product__likesNumber").innerHTML);
+                document.getElementById("product__likesNumber").innerHTML = String(product__likesNumber - 1);
+                likesFlag = likesFlag - 1;
+            }
+            function likeClick(){
+                if(likesFlag == 0){addLike();}
+                else{removeLike();}
+            }
+
+            product__image_icon.addEventListener('click', imageZoom);
+            product__zoomCloseButton.addEventListener('click', closeZoom);
+            product__description_icon.addEventListener('mouseover', showLikeWindow);
+            product__description_icon.addEventListener('mouseout', removeLikeWindow);
+            product__description_icon.addEventListener('click', likeClick);
+
+
+        </script>
+
+    </body>
+
+</html>
+
+

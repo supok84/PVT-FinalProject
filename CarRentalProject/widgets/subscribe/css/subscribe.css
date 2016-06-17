@@ -1,0 +1,28 @@
+@import url(../../../common/css/reset.css);
+@import url(../../../common/css/fonts.css);
+@import url(../../../common/css/common.css);
+
+input{
+    border: 0;
+    outline: none;
+}
+.subscribe__form_text{
+    width: 240px;
+    height: 50px;
+    font: 12px 'HelveticaNeue-Medium';
+    color: #696969;
+    padding-left: 20px;
+    float: left;
+
+}
+.subscribe__form_submit{
+    float: left;
+    width: 90px;
+    height: 50px;
+    background: #e65d45;
+    background: -webkit-linear-gradient(top, #ee6452 0%, #e0573d 100%);
+    background: -moz-linear-gradient(top, #ee6452 0%, #e0573d 100%);
+    font: 14px 'HelveticaNeue-Bold';
+    color: #ffffff;
+    text-transform: uppercase;
+}

@@ -1,0 +1,101 @@
+@import url(../../../common/css/reset.css);
+@import url(../../../common/css/fonts.css);
+@import url(../../../common/css/common.css);
+
+.product__wrapper{
+    width: 330px;
+    height: 290px;
+    outline: 1px solid yellow;
+}
+.product__image{
+    width: 53%;
+    height: 290px;
+    background-image: url("img/santaCruz.png");
+    float: left;
+    position: relative;
+}
+.product__description{
+    width: 47%;
+    height: 290px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    float: left;
+    position: relative;
+}
+.product__decsription_header{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+div.product__description_content p{
+    padding: 2px 0;
+}
+.product__image_icon{
+    width: 40px;
+    height: 40px;
+    background: url("../../../common/css/img/sprite.png");
+    background-position: 120px 0;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    cursor: pointer;
+}
+.product__description_icon{
+    width: 40px;
+    height: 40px;
+    background: url("../../../common/css/img/sprite.png");
+    background-position: 160px 0;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+}
+.product__description_button{
+    background: #df573c;
+    background: -webkit-linear-gradient(top, #ef6552 0%, #df573c 100%);
+    background: -moz-linear-gradient(top, #ef6552 0%, #df573c 100%);
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    cursor: pointer;
+}
+#product__image_zoomed{
+    width: 330px;
+    height: 290px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    background-image: url("img/santaCruzZoom.png");
+    z-index: 10;
+    transition-property: width, height;
+    -webkit-transition-property: width, height;
+    -moz-transition-property: width, height;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+}
+
+#product__zoomCloseButton{
+    right: 3px;
+}
+#product__description_likeInfo{
+    width: 150px;
+    height: 35px;
+    opacity: 0.8;
+    background-color: #808080;
+    position: absolute;
+    top: -40px;
+    left: -65px;
+    color: #FFFFFF;
+    font: 12px "HelveticaNeue-Bold";
+    text-align: center;
+    line-height: 35px;
+    text-shadow: 0.1px 0.1px 0.01px #000000;
+    border-radius: 5px;
+    visibility: hidden;
+}
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}

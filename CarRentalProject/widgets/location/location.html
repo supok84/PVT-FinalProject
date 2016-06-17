@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="description" content="Location">
+            <meta charset="utf-8">
+            <link href="css/location.css" type="text/css" rel="stylesheet">
+            <title>Location</title>
+        </head>
+
+        <body>
+            <div class="location__wrapper">
+                <div class="location__top">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                    <div style='overflow:hidden;height:290px;width:330px;'><div id='gmap_canvas' style='height:290px;width:330px;'></div><div><small>
+                    <a href="http://embedgooglemaps.com">									embedgooglemaps.com							</a></small></div>
+                    <div><small><a href="http://buyproxies.io/">buy proxy</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+                    <script type='text/javascript'>
+					function init_map(){var myOptions = {zoom: 12,center:new google.maps.LatLng(37.73749576344509,-122.476165471875),mapTypeId: google.maps.MapTypeId.ROADMAP};
+                    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                    marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.73749576344509,-122.479165471875)});
+                    google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+					</script>
+                </div>
+
+                <div class="location__bottom">
+                    <div id="location__bottom_icon" id="location__bottom_icon"></div>
+                    <div class="boldFont">Sigmund Stern Grove</div>
+                    <div class="common__smallText">San Francisco, CA 94132</div>
+                    <div class="common__smallText">United States</div>
+                </div>
+            </div>
+
+
+            <!--
+            <script>
+
+                function goToTarget(){
+                    alert("x");
+                }
+
+                location__bottom_icon.addEventListener("click", goToTarget);
+
+            </script>-->
+        </body>
+
+    </html>

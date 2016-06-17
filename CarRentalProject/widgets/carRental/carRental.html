@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Car Rental">
+        <meta charset="utf-8">
+        <link href="css/carRental.css" type="text/css" rel="stylesheet">
+        <title>Car Rental</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!--<link href="blocks/style.min.css" type="text/css" rel="stylesheet">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="carRental__wrapper">
+            <div class="carRental__header common__header boldFont">
+                Car Rental
+            </div>
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" data-price="125" class="carousel-indicators-item active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" data-price="75" class="carousel-indicators-item"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" data-price=" 2" class="carousel-indicators-item"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" data-price="125">
+                        <img src="img/ford.png" alt="Ford Mustang">
+                        <div class="carousel-caption boldFont">
+                            <p>2013 Ford Mustang </p>
+                            <p> Convertible </p>
+                        </div>
+                    </div>
+                    <div class="item" data-price="75">
+                        <img src="img/forester.png" alt="Subaru Forester">
+                        <div class="carousel-caption boldFont">
+                            <p>2016 Subaru Forester</p>
+                            <p> Universal </p>
+                        </div>
+                    </div>
+                    <div class="item" data-price="2">
+                        <img src="img/zaz.png" alt="ZAZ">
+                        <div class="carousel-caption boldFont">
+                            <p>1964 ZAZ</p>
+                            <p> Sedan </p>
+                        </div>
+                    </div>
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" id="leftControl">
+                    <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" id="rightControl">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="carRental__bottom">
+                <form name="carRental__book" method="post" action="#">
+                    <button class="common__button" type="submit">
+                        <span class="common__buttonText">book</span>
+                    </button>
+                </form>
+                <div class="common__smallText">Best Price</div>
+                <div class="common__bigText">
+                    $<span id="carRental__bottom_price">125</span>  / <span class="common__capitel">day</span>
+                </div>
+            </div>
+
+        </div>
+        <script async src="script/carRental.js"></script>
+
+
+    </body>
+
+</html>
+
+

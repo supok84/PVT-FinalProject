@@ -1,0 +1,31 @@
+@import url(../../../common/css/reset.css);
+@import url(../../../common/css/fonts.css);
+@import url(../../../common/css/common.css);
+.location__wrapper{
+    width: 330px;
+    height: 385px;
+}
+.location__top{
+    width: 330px;
+    height: 290px;
+}
+.location__bottom{
+    width: 330px;
+    height: 95px;
+    position: relative;
+}
+#location__bottom_icon{
+    width: 40px;
+    height: 40px;
+    background: url("../../../common/css/img/sprite.png");
+    background-position: 80px 0;
+    position: absolute;
+    top:0;
+    right: 5px;
+    cursor: pointer;
+}
+div.location__bottom div:nth-child(2){
+    font-size: 20px;
+    padding: 15px 0 0 20px;
+    height: 42px;
+}

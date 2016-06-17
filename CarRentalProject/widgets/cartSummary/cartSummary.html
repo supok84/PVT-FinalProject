@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Cart Summary">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/cartSummary.css" type="text/css" rel="stylesheet">
+        <title>Cart Summary</title>
+    </head>
+
+    <body>
+        <div class="cartSummary__wrapper">
+            <div class="cartSummary__header common__header boldFont">
+                Cart Summary
+            </div>
+
+            <div class="cartSummary__content">
+
+                <div class="cartSummary__content_item" id="cartSummary__flightData">
+                    <div class="cartSummary__content_itemPriest" id="cartSummary__flightData_delete"></div>
+                    <div class="cartSummary__content_itemFlightImage"></div>
+                    <div class="cartSummary__content_itemData">
+                        <p class="common__smallText">Flight</p>
+                        <p class="cartSummary__content_text">LHR - SFO</p>
+                    </div>
+                    <div class="cartSummary__content_itemPrice">
+                        <span class="cartSummary__content_bigText">$</span>
+                        <span class="cartSummary__content_text" id="cartSummary__flightPrice"></span>
+                    </div>
+                </div>
+
+                <div class="cartSummary__line" id="cartSummary__firstLine"></div>
+                <div class="cartSummary__line" id="cartSummary__secondLine"></div>
+
+                <div class="cartSummary__button common__button" id="cartSummary__addFlightButton">
+				    Add Flight
+				</div>
+
+                <div class="cartSummary__content_item" id="cartSummary__hotelData">
+                    <div class="cartSummary__content_itemPriest" id="cartSummary__hotelData_delete"></div>
+                    <div class="cartSummary__content_itemHotelImage"></div>
+                    <div class="cartSummary__content_itemData">
+                        <p class="common__smallText">Hotel</p>
+                        <p class="cartSummary__content_text">14 Nights</p>
+                    </div>
+                    <div class="cartSummary__content_itemPrice">
+                        <span class="cartSummary__content_bigText">$</span>
+                        <span class="cartSummary__content_text" id="cartSummary__hotelPrice"></span>
+                    </div>
+                </div>
+
+                <!--<div class="cartSummary__button_wrapper"> </div>-->
+
+                <div class="cartSummary__button common__button" id="cartSummary__addHotelButton">
+                    Add Hotel
+                </div>
+
+				<div class="cartSummary__content_total">
+                    <div class="cartSummary__content_totalHalf cartSummary__content_bigText">total</div>
+                    <div class="cartSummary__content_totalHalf cartSummary__content_bigText">
+                        $
+                        <span id="cartSummary_totalPrice"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <form name="cartSummary__checkout" method="post" action="#">
+                <button type="submit" class="cartSummary__bottom boldFont">
+                    checkout
+                </button>
+            </form>
+
+        </div>
+
+        <script>
+
+            function cartSummarySum() {
+                var cartSummary__flightPrice = Number(document.getElementById("cartSummary__flightPrice").innerHTML);
+                var cartSummary__hotelPrice = Number(document.getElementById("cartSummary__hotelPrice").innerHTML);
+                document.getElementById("cartSummary_totalPrice").innerHTML = cartSummary__flightPrice + cartSummary__hotelPrice;
+            }
+            function deleteFlightClick() {
+				var cartSummary__flightData = document.getElementById("cartSummary__flightData");
+				var cartSummary__addFlightButton = document.getElementById("cartSummary__addFlightButton");
+				var cartSummary__flightPrice = document.getElementById("cartSummary__flightPrice");
+				cartSummary__flightPrice.innerHTML = '';
+				cartSummary__flightData.style.visibility = "hidden";
+				cartSummary__addFlightButton.style.visibility = "visible";
+				cartSummarySum();
+			}
+			function deleteHotelClick() {
+				var cartSummary__hotelData = document.getElementById("cartSummary__hotelData");
+				var cartSummary__addHotelButton = document.getElementById("cartSummary__addHotelButton");
+				var cartSummary__hotelPrice = document.getElementById("cartSummary__hotelPrice");
+				cartSummary__hotelPrice.innerHTML = '';
+				cartSummary__hotelData.style.visibility = "hidden";
+				cartSummary__addHotelButton.style.visibility = "visible";
+				cartSummarySum();
+			}
+			function flightButtonClick(){
+				var cartSummary__flightData = document.getElementById("cartSummary__flightData");
+				var cartSummary__addFlightButton = document.getElementById("cartSummary__addFlightButton");
+				var cartSummary__flightPrice = document.getElementById("cartSummary__flightPrice");
+				cartSummary__flightPrice.innerHTML = 623.65;
+				cartSummary__flightData.style.visibility = "visible";
+				cartSummary__addFlightButton.style.visibility = "hidden";
+				cartSummarySum();
+			}		
+			function hotelButtonClick(){
+				var cartSummary__hotelData = document.getElementById("cartSummary__hotelData");
+				var cartSummary__addHotelButton = document.getElementById("cartSummary__addHotelButton");
+				var cartSummary__hotelPrice = document.getElementById("cartSummary__hotelPrice");
+				cartSummary__hotelPrice.innerHTML = 750;
+				cartSummary__hotelData.style.visibility = "visible";
+				cartSummary__addHotelButton.style.visibility = "hidden";
+				cartSummarySum();
+			}
+			
+			
+			cartSummary__flightData_delete.addEventListener("click", deleteFlightClick);
+			cartSummary__hotelData_delete.addEventListener("click", deleteHotelClick);
+			cartSummary__addFlightButton.addEventListener("click", flightButtonClick);
+			cartSummary__addHotelButton.addEventListener("click", hotelButtonClick);
+
+        </script>
+    </body>
+
+</html>
+
+

@@ -1,0 +1,75 @@
+@import url(../../../common/css/reset.css);
+@import url(../../../common/css/fonts.css);
+@import url(../../../common/css/common.css);
+
+.lineChart__wrapper{
+    width: 330px;
+    height: 290px;
+    outline: 1px solid blue;
+    position: relative;
+
+}
+.lineChart__top{
+    width: 100%;
+    height: 200px;
+    background: #ee7449;
+    background: -webkit-linear-gradient(top, #f69556 0%, #ec6e46 100%);
+    background: -moz-linear-gradient(top, #f69556 0%, #ec6e46 100%);
+    position: relative;
+}
+
+.lineChart__bottom{
+    width: 100%;
+    height: 90px;
+    background-color: #ffffff;
+}
+div.lineChart__bottom .common__smallText{
+    padding-top: 20px;
+}
+.lineChart__top_header{
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px 0 0 20px;
+    text-shadow: 0.5px 0.3px 2px #000000;
+}
+#lineChart__icon{
+    width: 41px;
+    height: 40px;
+    background-image: url("../../../common/css/img/sprite.png");
+    background-position: 40px 0;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    cursor: pointer;
+}
+#lineChart__canvas{
+    height: 110px;
+    width: 300px;
+    margin-top: 20px;
+}
+#lineChart__totalVisitorsTable, #lineChart__overseasVisitorsTable{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+}
+div#lineChart__totalVisitorsTable table, div#lineChart__overseasVisitorsTable table{
+    margin: 20px auto 0 auto;
+}
+div#lineChart__totalVisitorsTable table td, div#lineChart__totalVisitorsTable table th, div#lineChart__overseasVisitorsTable table td ,div#lineChart__overseasVisitorsTable table th{
+    border: 2px solid #000000;
+    width: 50px;
+    height: 15px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 2px 2px 5px #808080;
+}
+div#lineChart__overseasVisitorsTable table td ,div#lineChart__overseasVisitorsTable table th{
+    background: #00FFA6;
+}
+div#lineChart__totalVisitorsTable table td.table_data, div#lineChart__overseasVisitorsTable table td.overseasTable_data{
+    width: 150px;
+}
