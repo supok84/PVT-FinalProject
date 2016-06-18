@@ -433,9 +433,9 @@ div.product__description_content p{
 #product__image_zoomed{
     width: 330px;
     height: 290px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: fixed;
+    left: 100px;
+    top: 30px;
     visibility: hidden;
     background-image: url("img/santaCruzZoom.png");
     z-index: 10;
